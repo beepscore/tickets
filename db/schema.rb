@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090516211315) do
+ActiveRecord::Schema.define(:version => 20090517024653) do
+
+  create_table "events", :force => true do |t|
+    t.string   "artist"
+    t.text     "description"
+    t.decimal  "price_low"
+    t.decimal  "price_high"
+    t.date     "event_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tickets", :force => true do |t|
     t.string   "name"
